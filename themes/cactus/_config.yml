@@ -29,7 +29,7 @@ nav:
 social_links:
   -
     icon: github
-    link: http://github.com/probberechts/cactus-dark
+    link: http://github.com/ry4ng
   -
   #   icon: twitter
   #   link: /
@@ -107,9 +107,9 @@ logo:
   enabled: true
   width: 100
   height: 100
-  url: /images/blog-logo-2-nbg-small.png
+  url: /images/tux-sunny4-nbg.png
   gravatar: false
-  grayout: false
+  grayout: true
 
 # Customize the favicons.
 # Cactus supports a limited set of the three most important icons:
