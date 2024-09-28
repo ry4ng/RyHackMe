@@ -15,8 +15,8 @@ direction: ltr
 # languages/*.yml
 nav:
   home: /
-#  about: /about/
   articles: /archives/
+#  about: /about/
 #  projects: http://github.com/probberechts
 
 
@@ -122,13 +122,13 @@ logo:
 #   - gravatar: whether to create a favicon from your Gravatar
 favicon:
   desktop:
-    url: /images/blog-logo-2-nbg-small.png
+    url: /images/tux-favpak/favicon.ico
     gravatar: false
   android:
-    url: /images/blog-logo-2-small.png
+    url: /images/tux-favpak/android-chrome-192x192.png
     gravatar: false
   apple:
-    url: /images/blog-logo-2-small.png
+    url: /images/tux-favpak/apple-touch-icon.png
     gravatar: false
 
 # The color scheme that should be used to highlight codeblocks.
