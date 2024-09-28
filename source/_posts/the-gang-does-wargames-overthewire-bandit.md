@@ -5,15 +5,15 @@ tags:
 ---
 
 # OverTheWire - Bandit
-*This will be a dynamic blog post, with solutions being posted as they are completed.*
+*This is a dynamic blog post, with solutions being posted as they are completed.*
 
 Walkthrough for the [Bandit Wargame](https://overthewire.org/wargames/bandit/) on `OverTheWire.org`
 
-## Table of Contents
+<!-- ## Table of Contents
 1. [Level 0](#Level-0)
 2. [Level 1](#Level-0-1)
 3. [Level 2](#Level-1-2)
-4. [Level 3](#Level-2-3)
+4. [Level 3](#Level-2-3) -->
 
 ## Level 0
 > The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
