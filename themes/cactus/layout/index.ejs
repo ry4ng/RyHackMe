@@ -1,9 +1,13 @@
 <section id="about" class="p-note">
   <% if (config.description) { %>
     <%- markdown(config.description) %>
+    <!-- <br> -->
   <% } %>
+  <p>A blog about cybersecurity et al.</p>
+  <!-- <br style="line-height:5px !important;display: block; margin: 10px 0;"> -->
   <% if (theme.social_links) { %>
     <p>
+      <br>
       <%= __('index.find_me_on') %>
       <% var nb_links = theme.social_links.length %>
       <% var i = 0 %>
@@ -33,7 +37,8 @@
 </section>
 
 <section id="writing">
-  <span class="h1"><a href="<%- url_for(theme.nav.articles) %>"><%= __('index.articles') %></a></span>
+  <br>
+  <!-- <span class="h1"><a href="<%- url_for(theme.nav.articles) %>"><%= __('index.articles') %></a></span> -->
   <% if (theme.tags_overview && site.tags.length) { %>
   <span class="h2"><%= __('index.topics') %></span>
   <span class="widget tagcloud">
