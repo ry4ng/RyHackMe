@@ -5,9 +5,9 @@ tags:
 ---
 
 # OverTheWire - Bandit
-*This is a dynamic blog post, with solutions being posted as they are completed.*
-
 Walkthrough for the [Bandit Wargame](https://overthewire.org/wargames/bandit/) on `OverTheWire.org`
+
+*This is a dynamic blog post, with solutions being posted as they are completed.*
 
 <!-- ## Table of Contents
 1. [Level 0](#Level-0)
