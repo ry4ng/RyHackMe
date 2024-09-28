@@ -178,7 +178,7 @@ morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 > The password for the next level is stored in the file `data.txt` next to the word millionth
 
 1) Utilise the `grep` command to search for the word within the file
-*Learn more about `grep` courtesy of the gang [here]()*
+*Learn more about `grep` courtesy of the gang [here](/RyHackMe/2024/09/28/The-Gang-Grapples-with-Grep/)*
 ```bash
 bandit7@bandit:~$ cat data.txt | grep -i "millionth"
 millionth       dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc

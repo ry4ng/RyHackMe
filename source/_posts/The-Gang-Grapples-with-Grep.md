@@ -1,7 +1,7 @@
 ---
 title: 'The Gang Grapples with Grep'
 date: 2024-09-28 21:40:54
-tags: 
+tags: ['grep','the gang explains','linux','unix','commands']
 ---
 
 > Scene: Paddy’s Pub, Daytime. The gang is gathered around the bar. Dennis is on a laptop, trying to look like an expert as usual. Mac and Charlie are peering over his shoulder. Dee is reluctantly interested, and Frank is sitting on a stack of printed papers, wearing glasses, and looking like he’s about to lecture everyone.
