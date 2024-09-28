@@ -1,7 +1,8 @@
 ---
 title: "The Gang Does Wargames: OverTheWire (Bandit)"
 date: 2024-09-28 08:45:14
-tags:
+author: ['ry4ng']
+tags: ['overthewire','bandit','wargames','linux','basics','ssh','walkthrough']
 ---
 
 # OverTheWire - Bandit
