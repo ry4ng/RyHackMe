@@ -84,3 +84,87 @@ drwxr-xr-x 3 root    root    4096 Sep 19 07:08 ..
 bandit3@bandit:~/inhere$ cat ...Hiding-From-You
 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 ```
+
+## Level 4>5
+> The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
+
+1) Check the contents of the `inhere` directory
+```bash
+bandit4@bandit:~/inhere$ ls -la
+total 48
+drwxr-xr-x 2 root    root    4096 Sep 19 07:08 .
+drwxr-xr-x 3 root    root    4096 Sep 19 07:08 ..
+-rw-r----- 1 bandit5 bandit4   33 Sep 19 07:08 -file00
+-rw-r----- 1 bandit5 bandit4   33 Sep 19 07:08 -file01
+-rw-r----- 1 bandit5 bandit4   33 Sep 19 07:08 -file02
+-rw-r----- 1 bandit5 bandit4   33 Sep 19 07:08 -file03
+-rw-r----- 1 bandit5 bandit4   33 Sep 19 07:08 -file04
+-rw-r----- 1 bandit5 bandit4   33 Sep 19 07:08 -file05
+-rw-r----- 1 bandit5 bandit4   33 Sep 19 07:08 -file06
+-rw-r----- 1 bandit5 bandit4   33 Sep 19 07:08 -file07
+-rw-r----- 1 bandit5 bandit4   33 Sep 19 07:08 -file08
+-rw-r----- 1 bandit5 bandit4   33 Sep 19 07:08 -file09
+```
+
+2) The following command can be used to loop through all the files in the directory. Taking caution with the filenames starting with `-`
+```bash
+bandit4@bandit:~/inhere$ for file in ./*; do file $file; done
+./-file00: data
+./-file01: data
+./-file02: data
+./-file03: data
+./-file04: data
+./-file05: data
+./-file06: data
+./-file07: ASCII text
+./-file08: data
+./-file09: data
+```
+`for file in ./*;` For each item that matches wildcard `*` in the current directory (`.` means current directory), assign it to the variable `file`, which can later be referenced as `$file`
+`do file $file;` For each item, run the command `file` on it, this will display information about the contents of the file. 
+
+3) From the output, there is only 1 file containing human-readable `ASCII` text. View the contents of this file. 
+```bash
+bandit4@bandit:~/inhere$ cat ./-file07 
+4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+```
+
+## Level 5>6
+> The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties: human-readable, 1033 bytes in size, not executable
+
+1) Utilise the `find` command to search for the specific file
+```bash
+bandit5@bandit:~/inhere$ find -type f -not -executable -size 1033c -exec file '{}' \;
+./maybehere07/.file2: ASCII text, with very long lines (1000)
+```
+`-type f` Look for files only.
+`-not -executable` Used to negate the following flag or condition i.e. not executable.
+`-size 1033c` Look for files of exactly size `1033` bytes. Further size suffixes below.
+`-exec file '{}' \;` For each file found within the criteria, rune the `file` command agaisnt it. 
+```
+              `b'    for 512-byte blocks (this is the default if no suffix is used)
+              `c'    for bytes
+              `w'    for two-byte words
+              `k'    for kibibytes (KiB, units of 1024 bytes)
+              `M'    for mebibytes (MiB, units of 1024 * 1024 = 1048576 bytes)
+              `G'    for gibibytes (GiB, units of 1024 * 1024 * 1024 = 1073741824 bytes)
+```
+
+2) Read the file contents 
+```bash
+$ cat ./inhere/maybehere07/.file2
+HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+```
+
+## Level 6>7
+Find a file anywhere on the server with the following properties. 
+```
+    owned by user bandit7
+    owned by group bandit6
+    33 bytes in size
+```
+```bash
+find / -type f -user bandit7 -group bandit6 -size 33c 2> /dev/null
+```
+This also supresses "permission denied" errors with `2> /dev/null`.\
+Password: `morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj`
