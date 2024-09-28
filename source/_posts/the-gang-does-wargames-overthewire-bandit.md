@@ -1,5 +1,5 @@
 ---
-title: "The Gang Does Wargames: OverTheWire (Bandit)"
+title: "The Gang Does Wargames: OverTheWire - Bandit (Walkthrough)"
 date: 2024-09-28 08:45:14
 author: ['ry4ng']
 tags: ['overthewire','bandit','wargames','linux','basics','ssh','walkthrough']
@@ -130,7 +130,7 @@ bandit4@bandit:~/inhere$ cat ./-file07
 ```
 
 ## Level 5>6
-> The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties: human-readable, 1033 bytes in size, not executable
+> The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties: `human-readable`, `1033` bytes in size, `not executable`
 
 1) Utilise the `find` command to search for the specific file
 ```bash
@@ -157,14 +157,29 @@ HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 ```
 
 ## Level 6>7
-Find a file anywhere on the server with the following properties. 
-```
-    owned by user bandit7
-    owned by group bandit6
-    33 bytes in size
-```
+> The password for the next level is stored somewhere on the server and has all of the following properties: owned by user `bandit7`, owned by group `bandit6`, `33` bytes in size
+
+1) Utilise the `find` command to search for the specific file
 ```bash
-find / -type f -user bandit7 -group bandit6 -size 33c 2> /dev/null
+bandit6@bandit:~$ find / -type f -user bandit7 -group bandit6 -size 33c 2> /dev/null
+/var/lib/dpkg/info/bandit7.password
 ```
-This also supresses "permission denied" errors with `2> /dev/null`.\
-Password: `morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj`
+`-user` Find items owned by a specific user 
+`-group` Find items that belong to a specific group  
+`2> /dev/null` Used to supresses errors (ensuring the console doens't become clogged with error messages, usually permission denied errors in this case)
+
+2) Read the file contents 
+```bash
+bandit6@bandit:~$ cat /var/lib/dpkg/info/bandit7.password
+morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+```
+
+## Level 7>8
+> The password for the next level is stored in the file `data.txt` next to the word millionth
+
+1) Utilise the `grep` command to search for the word within the file
+*Learn more about `grep` courtesy of the gang [here]()*
+```bash
+bandit7@bandit:~$ cat data.txt | grep -i "millionth"
+millionth       dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+```
