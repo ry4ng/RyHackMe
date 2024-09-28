@@ -3,7 +3,7 @@ name: Pages
 on:
   push:
     branches:
-      - ias # default branch
+      - ias # default branch (ias whilst merging)
 
 jobs:
   build:
