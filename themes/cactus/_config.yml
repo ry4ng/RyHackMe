@@ -109,7 +109,7 @@ logo:
   height: 100
   url: /images/tux-sunny4-nbg.png
   gravatar: false
-  grayout: true
+  grayout: false
 
 # Customize the favicons.
 # Cactus supports a limited set of the three most important icons:
