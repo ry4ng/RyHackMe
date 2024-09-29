@@ -1,14 +1,14 @@
 ---
-title: "The Gang Does Wargames: OverTheWire - Bandit (Walkthrough)"
+title: "The Gang Does Wargames: OverTheWire - Bandit [Technical Walkthrough]"
 date: 2024-09-28 08:45:14
 author: ['ry4ng']
-tags: ['overthewire','bandit','wargames','linux','basics','ssh','walkthrough']
+tags: ['overthewire','bandit','wargames','linux','basics','ssh', 'technical walkthrough']
 ---
 
 # OverTheWire - Bandit
 Walkthrough for the [Bandit Wargame](https://overthewire.org/wargames/bandit/) on `OverTheWire.org`
 
-*This is a dynamic blog post, with solutions being posted as they are completed.*
+*This is a live blog post, with solutions being posted as they are completed.*
 
 <!-- ## Table of Contents
 1. [Level 0](#Level-0)
