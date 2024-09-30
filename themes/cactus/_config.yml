@@ -30,15 +30,15 @@ social_links:
   -
     icon: github
     link: http://github.com/ry4ng
-  -
+  # -
   #   icon: twitter
   #   link: /
   # -
   #   icon: facebook
   #   link: /
   # -
-    icon: mail
-    link: mailto:name@email.com
+    # icon: mail
+    # link: mailto:name@email.com
   # -
   #   icon: mastodon
   #   label: mastodon.social
