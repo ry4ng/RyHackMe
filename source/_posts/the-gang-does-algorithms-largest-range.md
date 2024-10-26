@@ -134,6 +134,12 @@ For the provided example, this would output `[76, 89]`, meaning the largest rang
   
 - **Space Complexity**: **O(N)**. We store each number in a hash map, which requires additional memory equivalent to the size of the input.
 
+![Alt Text](o-n-time-complexity.png)
+
+This graphic illustrates the concept of `O(N)` time complexity. As the input size `N` increases, the number of operations grows linearly, showing that for each additional element in the input, one additional operation is required. This "linear growth" is characteristic of `O(N)` complexity, where the time it takes scales directly with the size of the input. 
+
+In the context of our solution, this means that every element in the input is only processed once, making the overall efficiency linearly proportional to `N`.
+
 ---
 
 ## **Conclusion**
